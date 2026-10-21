@@ -148,28 +148,21 @@ video.ff { object-fit: contain; transform: scaleY(0.72); transform-origin: cente
     border-radius: 8px;
     display: none;
     flex-direction: column;
-    min-width: 100px;
-    max-height: 200px;
-    overflow-y: auto;
+    min-width: 90px;
+    overflow: hidden;
     z-index: 60;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-    backdrop-filter: blur(4px);
 }
 #qm.open { display: flex; }
 #qm button {
     background: transparent;
     border: none;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
     color: #eee;
     padding: 8px 12px;
     font-size: 12px;
-    text-align: center;
+    text-align: right;
     cursor: pointer;
-    transition: background 0.2s;
 }
-#qm button:last-child { border-bottom: none; }
-#qm button:hover { background: rgba(255,255,255,0.15); }
-#qm button.active { background: #3b82f6; color: #fff; font-weight: bold; }
+#qm button.active { background: #3b82f6; color: #fff; }
 
 #iframe-wrap {
     position: absolute;
@@ -240,153 +233,32 @@ video.ff { object-fit: contain; transform: scaleY(0.72); transform-origin: cente
     flex: 1;
     overflow-y: auto;
     background: #0f0f13;
-    padding: 8px 10px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 12px;
 }
-.ch-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-bottom: 1px solid #1e293b;
-    padding: 2px 0;
-    gap: 8px;
-}
+.ch-row { display: flex; flex-direction: column; gap: 6px; }
+.row-label { display: flex; align-items: center; gap: 6px; color: #94a3b8; font-size: 12px; font-weight: 700; padding: 0 4px; }
+.row-scroll { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; }
+.row-scroll::-webkit-scrollbar { height: 4px; }
+.row-scroll::-webkit-scrollbar-thumb { background: #334155; border-radius: 2px; }
 
-.row-label {
-    flex-shrink: 0;
-    width: 55px;
-    min-width: 55px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 3px;
-    color: #94a3b8;
-    font-size: 9px;
-    font-weight: 700;
-    padding: 4px 2px;
-    border-left: 1px solid #1e293b;
-    background: #0b0f17;
-    border-radius: 6px;
-}
-
-.row-label span:first-child {
-    font-size: 16px;
-}
-
-.row-scroll {
-    flex: 1;
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    align-items: center;
-    padding: 2px 0;
-}
 .ch {
     flex: 0 0 auto;
     background: #1e293b;
     border: 1px solid #334155;
     color: #e2e8f0;
-    min-width: 72px;
-    height: 36px;
-    padding: 0 10px;
+    padding: 10px 14px;
     border-radius: 8px;
     font-size: 12px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s;
     white-space: nowrap;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
 }
 .ch:hover { background: #334155; }
 .ch.on { background: #2563eb; border-color: #60a5fa; color: #fff; }
 .ch.dash-ch { border-right: 3px solid #10b981; }
 .ch.ts-ch { border-right: 3px solid #f59e0b; }
 .ch.iframe-ch { border-right: 3px solid #8b5cf6; }
-
-.ch.bein-logo-ch {
-    width: 72px;
-    height: 36px;
-    padding: 3px 6px;
-    overflow: hidden;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-}
-.ch.bein-logo-ch img {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-.row-scroll { scrollbar-width: none; }
-.row-scroll::-webkit-scrollbar { display: none; }
-.ch-row {
-    border-bottom: 1px solid #3b4657;
-    padding-bottom: 6px;
-}
-#ch-rows { background: #000; }
-.row-label { background: #000; }
-
-/* ===== تخصيص أزرار صفوف ثمانية (TS + HLS) ===== */
-/* نفس مقاس beIN تماماً + خلفية سوداء + نص أبيض */
-.ch.thamanya-ch {
-    background: #000000;
-    border: 1px solid #2a2a2a;
-    color: #ffffff;
-    width: 72px;
-    min-width: 72px;
-    height: 36px;
-    padding: 3px 6px;
-    gap: 4px;
-    font-size: 12px;
-    font-weight: 700;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-}
-.ch.thamanya-ch:hover {
-    background: #1a1a1a;
-    border-color: #555;
-}
-.ch.thamanya-ch.on {
-    background: #1a1a1a;
-    border-color: #60a5fa;
-    color: #ffffff;
-    box-shadow: 0 0 0 1px #60a5fa inset;
-}
-.ch.thamanya-ch img {
-    width: 16px;
-    height: 16px;
-    object-fit: contain;
-    display: block;
-}
-.ch.thamanya-ch span {
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 1;
-}
-/* تنسيق أزرار الشعارات المخصصة (ألوان والفجر) */
-.custom-logo-ch {
-  padding: 4px 10px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  min-width: 64px !important;
-}
-.custom-logo-ch img {
-  width: 100% !important;
-  height: 100% !important;
-  max-height: 28px !important;
-  object-fit: contain !important;
-  display: block !important;
-}
