@@ -544,11 +544,35 @@ var alwanChannels = [
 
 const sscDashChannels = [
   {
+    n: "ott News",
+    u: "https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/ghwcl6hv68/out/v1/83536910d8034e9b9895a20fbe1c1687/cenc.mpd",
+    t: "dash",
+    clearkey: {
+      "335DAD778109954503DCBB21DC92015F": "24bfd75d436cbf73168a2a2dccd40281"
+    }
+  },
+  {
+    n: "ott2",
+    u: "https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd",
+    t: "dash",
+    clearkey: {
+      "0b42be2664d7e811d04f3e504e0924c5": "ae24090123b8c72ac5404dc152847cb8"
+    }
+  },
+  {
+    n: "ott3",
+    u: "https://a151aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd",
+    t: "dash",
+    clearkey: {
+      "3d04975236a44f62857d181597705ee6": "362133e9cb13189ad4fe095ced216f60"
+    }
+  },
+  {
     n: "SSC News",
     u: "https://ssc-news-live-enc.edgenextcdn.net/out/v1/ef466f43623c4bbaa3f905b566ec35ea/index.mpd",
     t: "dash",
     clearkey: {
-      "3d04975236a44f62857d181597705ee6": "362133e9cb13189ad4fe095ced216f60"
+      "7995c724a13748ed970840a8ab5bb9b3": "67bdaf1e2175b9ff682fcdf0e2354b1e"
     }
   },
   {
